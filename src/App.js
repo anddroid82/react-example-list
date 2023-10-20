@@ -1,23 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
+import List from './List';
+import Actions from './Actions';
 
 function App() {
+  let left = [
+    {id:1,value:"1"},
+    {id:2,value:"2"},
+    {id:3,value:"3"},
+    {id:4,value:"4"},
+  ];
+  let right = [];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <List items={left} />
+      <Actions/>
+      <List items={right}/>
     </div>
   );
 }
