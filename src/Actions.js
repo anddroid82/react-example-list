@@ -1,10 +1,10 @@
 import React from 'react';
 
-function Actions(props) {
+function Actions({rightClicked,leftClicked}) {
     return (
-        <div>
-            <button>&lt;</button>
-            <button>&gt;</button>
+        <div className="actions">
+            <button key="right" onClick={rightClicked}>&gt;</button>
+            <button key="left" onClick={leftClicked}>&lt;</button>
         </div>
     );
 }
